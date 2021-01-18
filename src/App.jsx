@@ -1,6 +1,6 @@
 // Reactのコンポーネントとわかりやすいようにファイル名を『〜.jsx』とする
-
-import React from "react";
+import React, { useState } from "react";
+import ColorfulMessage from "./components/ColorfulMessage";
 
 const App = () => {
   const onClickButton = () => {
@@ -19,6 +19,8 @@ const App = () => {
        */}
       <h1 style={{ color: "red" }}>こんにちは</h1>
       {/* オブジェクトとしてstyleを割り当てる */}
+      <ColorfulMessage color="blue">お元気ですか？</ColorfulMessage>
+      <ColorfulMessage color="pink">元気です。</ColorfulMessage>
       <p style={contentStyle}>hello</p>
       <button onClick={onClickButton}>ボタン</button>
     </>
