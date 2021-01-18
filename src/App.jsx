@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import ColorfulMessage from "./components/ColorfulMessage";
 
 const App = () => {
-  const onClickButton = () => {
-    alert();
+  const onClickCountUp = () => {
+    setNum(num + 1);
   };
+  // useStateで使ったていく変数を設定する
+  const [num, setNum] = useState(0);
   const contentStyle = {
     color: "blue",
     fontSize: "50px"
@@ -22,7 +24,8 @@ const App = () => {
       <ColorfulMessage color="blue">お元気ですか？</ColorfulMessage>
       <ColorfulMessage color="pink">元気です。</ColorfulMessage>
       <p style={contentStyle}>hello</p>
-      <button onClick={onClickButton}>ボタン</button>
+      <button onClick={onClickCountUp}>カウントアップ</button>
+      <p>{num}</p>
     </>
   );
 };
